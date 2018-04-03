@@ -1,0 +1,20 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Defender.Clases.Escenas
+{
+    public class Titulo : Escena
+    {
+        override public void LoadContent()
+        {
+            base.LoadContent();
+        }
+        
+        public override void 
+    }
+}

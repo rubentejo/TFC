@@ -41,6 +41,22 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Clases\Armas\Arco.cs" />
+    <Compile Include="Clases\Armas\Arma.cs" />
+    <Compile Include="Clases\Armas\Flecha.cs" />
+    <Compile Include="Clases\Escenas\Ayuda.cs" />
+    <Compile Include="Clases\Escenas\Controlador.cs" />
+    <Compile Include="Clases\Escenas\Créditos.cs" />
+    <Compile Include="Clases\Escenas\Escena.cs" />
+    <Compile Include="Clases\Escenas\Juego.cs" />
+    <Compile Include="Clases\Escenas\Opciones.cs" />
+    <Compile Include="Clases\Escenas\Records.cs" />
+    <Compile Include="Clases\Escenas\Tienda.cs" />
+    <Compile Include="Clases\Escenas\Titulo.cs" />
+    <Compile Include="Clases\Miscelanea\BarraVida.cs" />
+    <Compile Include="Clases\Miscelanea\Moneda.cs" />
+    <Compile Include="Clases\Personajes\Enemigo.cs" />
+    <Compile Include="Clases\Personajes\Jugador.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,9 +75,7 @@
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clases\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

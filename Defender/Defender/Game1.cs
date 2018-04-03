@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Defender.Clases.Escenas;
+using Defender.Clases.Personajes;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -11,6 +13,8 @@ namespace Defender
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        int altoPantalla;
+        int anchoPantalla;
 
         public Game1()
         {
@@ -28,7 +32,18 @@ namespace Defender
         {
             // TODO: Add your initialization logic here
 
+            graphics.PreferredBackBufferHeight = (int)Controlador.Control.Dimensiones.Y;
+            graphics.PreferredBackBufferWidth = (int)Controlador.Control.Dimensiones.X;
+            graphics.ApplyChanges();
+
             base.Initialize();
+
+            //ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
+
+            //altoPantalla = graphics.GraphicsDevice.Viewport.Height;// (float)ApplicationView.GetForCurrentView().VisibleBounds.Height;
+            //anchoPantalla = graphics.GraphicsDevice.Viewport.Width; //(float)ApplicationView.GetForCurrentView().VisibleBounds.Width;
+
+            //this.IsMouseVisible = false;
         }
 
         /// <summary>
@@ -41,6 +56,7 @@ namespace Defender
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            Controlador.Control.LoadContent(Content);
         }
 
         /// <summary>
@@ -50,6 +66,7 @@ namespace Defender
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
+            Controlador.Control.UnloadContent();
         }
 
         /// <summary>
@@ -64,6 +81,8 @@ namespace Defender
 
             // TODO: Add your update logic here
 
+            Controlador.Control.Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -76,6 +95,8 @@ namespace Defender
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+
+            Controlador.Control.Draw(spriteBatch);
 
             base.Draw(gameTime);
         }

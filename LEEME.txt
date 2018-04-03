@@ -1,2 +1,6 @@
 28/03/2018
 	· Cree el proyecto y lo añadí a Github
+03/04/2018
+	· Cree el prototipo de estructura de clases (susceptible de cambio)
+	· Empece a crear clases y realizar pruebas para familiarizarme con el lenguaje sin resultados
+	· Traté de empezar el control de escenas para poder organizar bien las pruebas pero sin éxito
