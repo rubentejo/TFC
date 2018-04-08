@@ -13,8 +13,6 @@ namespace Defender
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        int altoPantalla;
-        int anchoPantalla;
 
         public Game1()
         {
@@ -32,18 +30,12 @@ namespace Defender
         {
             // TODO: Add your initialization logic here
 
-            graphics.PreferredBackBufferHeight = (int)Controlador.Control.Dimensiones.Y;
-            graphics.PreferredBackBufferWidth = (int)Controlador.Control.Dimensiones.X;
+            IsMouseVisible = true;
+
+            graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.Dimensiones.X;
+            graphics.PreferredBackBufferHeight = (int)ScreenManager.Instance.Dimensiones.Y;
             graphics.ApplyChanges();
-
             base.Initialize();
-
-            //ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
-
-            //altoPantalla = graphics.GraphicsDevice.Viewport.Height;// (float)ApplicationView.GetForCurrentView().VisibleBounds.Height;
-            //anchoPantalla = graphics.GraphicsDevice.Viewport.Width; //(float)ApplicationView.GetForCurrentView().VisibleBounds.Width;
-
-            //this.IsMouseVisible = false;
         }
 
         /// <summary>
@@ -56,7 +48,7 @@ namespace Defender
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            Controlador.Control.LoadContent(Content);
+            ScreenManager.Instance.LoadContent(Content);
         }
 
         /// <summary>
@@ -66,7 +58,7 @@ namespace Defender
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
-            Controlador.Control.UnloadContent();
+            ScreenManager.Instance.UnloadContent();
         }
 
         /// <summary>
@@ -81,8 +73,7 @@ namespace Defender
 
             // TODO: Add your update logic here
 
-            Controlador.Control.Update(gameTime);
-
+            ScreenManager.Instance.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -95,9 +86,9 @@ namespace Defender
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
-            Controlador.Control.Draw(spriteBatch);
-
+            spriteBatch.Begin();
+            ScreenManager.Instance.Draw(spriteBatch);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

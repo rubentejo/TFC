@@ -451,3 +451,10 @@
 /processorParam:Quality=Best
 /build:Musica/song.mp3
 
+#begin Fuentes/Default.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fuentes/Default.spritefont
+

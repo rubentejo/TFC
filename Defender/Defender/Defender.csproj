@@ -45,7 +45,8 @@
     <Compile Include="Clases\Armas\Arma.cs" />
     <Compile Include="Clases\Armas\Flecha.cs" />
     <Compile Include="Clases\Escenas\Ayuda.cs" />
-    <Compile Include="Clases\Escenas\Controlador.cs" />
+    <Compile Include="Clases\Escenas\Menu.cs" />
+    <Compile Include="Clases\Escenas\ScreenManager.cs" />
     <Compile Include="Clases\Escenas\Créditos.cs" />
     <Compile Include="Clases\Escenas\Escena.cs" />
     <Compile Include="Clases\Escenas\Juego.cs" />

@@ -13,24 +13,36 @@ namespace Defender.Clases.Escenas
     {
         protected ContentManager content;
 
-        public void LoadContent()
+        public virtual void LoadContent()
         {
-            content = new ContentManager(Controlador.Control.Content.ServiceProvider, "Content");
+            content = new ContentManager(ScreenManager.Instance.Content.ServiceProvider, "Content");
         }
 
-        public void UnloadContent()
+        public virtual void UnloadContent()
         {
             content.Unload();
         }
 
-        public void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
         {
 
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
 
         }
+
+        //public bool IsActive = true;
+        //public bool IsPopup = false;
+        //public Color BackgroundColor = Color.CornflowerBlue;
+
+        //public virtual void LoadAssets() { }
+
+        //public virtual void Update(GameTime gameTime) { }
+
+        //public virtual void Draw(GameTime gameTime) { }
+
+        //public virtual void UnloadAssets() { }
     }
 }
